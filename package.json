@@ -1,0 +1,25 @@
+{
+  "name": "flux-object-graph",
+  "version": "0.0.1",
+  "description": "An object graph for flux",
+  "main": "index.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/collinbrewer/flux-object-graph.git"
+  },
+  "keywords": [
+    "react",
+    "flux",
+    "object",
+    "graph"
+  ],
+  "author": "Collin Brewer <collin@brewer-collective.com>",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/collinbrewer/flux-object-graph/issues"
+  },
+  "homepage": "https://github.com/collinbrewer/flux-object-graph#readme"
+}
