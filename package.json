@@ -4,8 +4,13 @@
   "description": "An object graph for flux",
   "main": "index.js",
   "scripts": {
-    "test": "karma start --single-run", 
-    "test:dev": "karma start"
+    "test": "mocha tests --compilers js:babel-register",
+    "test:dev": "mocha tests --compilers js:babel-register --watch",
+    "test:cov": "babel-node ./node_modules/.bin/isparta cover node_modules/mocha/bin/_mocha -- tests",
+    "karma_test": "karma start --single-run",
+    "karma_test:dev": "karma start",
+	 "pretest:codeclimate": "npm run test:cov",
+    "test:codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info"
   },
   "repository": {
     "type": "git",
@@ -24,11 +29,22 @@
   },
   "homepage": "https://github.com/collinbrewer/flux-object-graph#readme",
   "devDependencies": {
+    "babel-cli": "^6.11.4",
     "babel-preset-es2015": "^6.9.0",
     "babel-preset-stage-0": "^6.5.0",
+    "chai": "^3.5.0",
+    "codeclimate-test-reporter": "^0.3.3",
+    "flux": "^2.1.1",
+    "isparta": "^4.0.0",
+    "istanbul": "^0.4.4",
     "karma": "^1.1.2",
     "karma-mocha": "^1.1.1",
     "karma-sourcemap-loader": "^0.3.7",
-    "mocha": "^2.5.3"
+    "mocha": "^2.5.3",
+    "sinon": "^1.17.5"
+  },
+  "dependencies": {
+    "@collinbrewer/predicate": "^0.1.2",
+    "json-pointer": "github:collinbrewer/json-pointer"
   }
 }
