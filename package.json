@@ -9,7 +9,7 @@
     "test:cov": "babel-node ./node_modules/.bin/isparta cover node_modules/mocha/bin/_mocha -- tests",
     "karma_test": "karma start --single-run",
     "karma_test:dev": "karma start",
-	 "pretest:codeclimate": "npm run test:cov",
+    "pretest:codeclimate": "npm run test:cov",
     "test:codeclimate": "codeclimate-test-reporter < ./coverage/lcov.info"
   },
   "repository": {
@@ -45,6 +45,8 @@
   },
   "dependencies": {
     "@collinbrewer/predicate": "^0.1.2",
-    "json-pointer": "github:collinbrewer/json-pointer"
+    "descriptor": "github:collinbrewer/descriptor",
+    "json-pointer": "github:collinbrewer/json-pointer",
+    "object-graph-schema": "github:collinbrewer/object-graph-schema"
   }
 }
